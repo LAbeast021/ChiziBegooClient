@@ -1,0 +1,59 @@
+/* Basic reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container holding the profile */
+.profileHeader {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px; /* Adds space inside the container */
+    border-bottom: 1px solid #dee2e6; /* Adds a subtle border at the bottom */
+}
+
+/* Styling the avatar image */
+.profileHeaderAvatar img {
+    width: 100px; /* Sets the size of the image */
+    height: 100px; /* Ensures the image is a square */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border: 3px solid #343a40; /* Dark grey border around the image */
+}
+
+/* Styling the text information */
+.profileHeader__info {
+    margin-left: 20px; /* Adds space between the image and the text */
+    text-align: center; /* Aligns the text to the center */
+}
+
+.profileHeader__info h1 {
+    font-size: 24px; /* Size of the name */
+    color: #343a40; /* Dark grey color for the text */
+    margin-bottom: 5px; /* Space between the name and the email */
+}
+
+.profileHeader__info p {
+    font-size: 16px;
+    color: #6c757d; /* Slightly lighter grey color for the email */
+}
+
+.allPostHolder {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card {
+    width: 300px; /* Fixed width, but could be responsive */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a shadow effect on hover */
+}

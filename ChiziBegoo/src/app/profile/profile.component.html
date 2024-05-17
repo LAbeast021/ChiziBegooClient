@@ -1,0 +1,36 @@
+<div class="profileHeader">
+    <div class="profileHeaderAvatar">
+        <img src="{{userProfile.profilePicture}}" alt="avatar">
+    </div>
+    <div class="profileHeader__info">
+        <h1> Welcome {{userProfile.username}}</h1>
+        <p> Your Email : {{email}}</p>
+    </div>
+</div>
+
+<div class="allPostHolder">
+    @for (item of posts; track item.id) 
+    {
+        <h1></h1>
+        <mat-card class="post-card">
+            <mat-card-header>
+                <mat-card-subtitle>{{ item.createdAt}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ item.content }}</p>
+            </mat-card-content>
+            <mat-card-actions class="post-actions">
+                <button mat-button>{{ item.likesCount }} Likes</button>
+            </mat-card-actions>
+        </mat-card>
+    } 
+    @empty 
+    {
+    <h2> You Do Not Have any Post Yet </h2>
+    <h2> Why Not add One ? </h2>
+    <button mat-icon-button [routerLink]="['/newpost']">
+        <mat-icon style="background-color: rgb(66, 66, 66); color: white;">add</mat-icon> <!-- 'add' is commonly used for creating new items -->
+    </button>
+    }
+
+</div>

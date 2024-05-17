@@ -1,0 +1,33 @@
+.post-card {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Adjust the base font size as needed */
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.time {
+    font-size: 0.8rem; /* Smaller font for the time */
+    color: #666; /* Lighter text color for the time */
+}
+
+.post-actions mat-icon {
+    color: #E91E63; /* Optional: style for the heart icon */
+}
+
+.likes {
+    margin-left: 5px;
+}
+
+.heart {
+    color: #E91E63;
+    filter: drop-shadow(3px 2px pink);
+}

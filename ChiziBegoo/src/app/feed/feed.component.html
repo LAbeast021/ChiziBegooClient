@@ -1,0 +1,31 @@
+<div class="allPostHolder">
+    @for (item of posts; track item.id) 
+    {
+        <mat-card class="post-card">
+            <mat-card-header>
+                <div class="post-header">
+                    <span class="username">{{ item.userName }}</span>
+                    <span class="time">{{ item.createdAt}}</span>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ item.content }}</p>
+            </mat-card-content>
+            <mat-card-actions class="post-actions">
+                <button mat-icon-button (click)="toggleLike(item)">
+                    <mat-icon>{{ item.isLiked ? 'favorite' : 'favorite_border' }}</mat-icon>
+                </button>
+                <span class="likes"> | {{ item.likesCount }} Likes</span>
+            </mat-card-actions>
+        </mat-card>
+    } 
+    @empty 
+    {
+    <h2> There are no posts yet : (  </h2>
+    <h2> Why Not add One ? </h2>
+    <button mat-icon-button [routerLink]="['/newpost']">
+        <mat-icon style="background-color: rgb(66, 66, 66); color: white;">add</mat-icon> <!-- 'add' is commonly used for creating new items -->
+    </button>
+    }
+
+</div>

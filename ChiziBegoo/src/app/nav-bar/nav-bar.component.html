@@ -1,0 +1,29 @@
+<style>
+.navbar button:hover {
+  background-color: #f0f0f0;
+}
+</style>
+<header>
+    <mat-toolbar class="navbar" style="color: black; background-color: grey; display: flex; justify-content: space-around;" color="primary">
+        <button mat-icon-button [routerLink]="['/feed']">
+          <mat-icon>home</mat-icon>
+        </button>
+
+        <button mat-icon-button [routerLink]="['/profile']">
+          <mat-icon>account_circlee</mat-icon>
+        </button>
+
+        <button mat-icon-button [routerLink]="['/newpost']">
+          <mat-icon>add</mat-icon> <!-- 'add' is commonly used for creating new items -->
+        </button>
+
+        <button mat-icon-button [routerLink]="['/LogOut']">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+
+
+        <!-- <a mat-flat-button color="primary" [routerLink]="['/profile']">Profile</a> -->
+        <!-- <a mat-flat-button color="primary" [routerLink]="['/LogOut']">Log Out</a> -->
+        <!-- <span class="separator"></span> -->
+    </mat-toolbar>
+  </header>
